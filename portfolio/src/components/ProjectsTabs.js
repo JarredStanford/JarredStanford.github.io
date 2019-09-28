@@ -17,7 +17,7 @@ const ProjectsTabs = () => {
     const { TabPane } = Tabs;
 
     return (
-        <ProjectHolder defaultActiveKey='1' tabPosition={window.innerWidth <= 800 ? 'top' : 'left'}>
+        <ProjectHolder defaultActiveKey='1' >
             <TabPane tab="Allegiance" key="1">
                 <Project>
                     <ProjectImage src={AllegianceImage} alt='Allegiance' />
@@ -53,17 +53,16 @@ object-fit: contain;
 const Project = styled.div`
 display: flex;
 flex-direction: row;
-justify-content: space-evenly;
+margin-left: 15%;
 @media (max-width: 800px) {
     flex-direction: column;
+    margin-left: 0
 }`
 
 const ProjectHolder = styled(Tabs)`
         display: flex;
         justify-content: center;
-    @media (max-width: 800px) {
         flex-direction: column;
-    }
 `
 
 export default ProjectsTabs
