@@ -1,15 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Button } from 'antd'
+
+import designComponents from '../../utils/designComponents'
 
 const HowTo = () => {
+
+    const { ButtonDiv, CustomText, MarginedButton } = designComponents()
+
     return (
         <div style={{ margin: 'auto' }}>
             <ButtonDiv>
-                <Button href='https://labs15-allegiance.netlify.com/' style={{ width: '150px' }}>Deployed Site</Button>
-                <Button href='https://github.com/labs15-allegiance' style={{ width: '150px' }}>GitHub</Button>
+                <MarginedButton href='https://labs15-allegiance.netlify.com/' >Deployed Site</MarginedButton>
+                <MarginedButton href='https://github.com/labs15-allegiance' >GitHub</MarginedButton>
             </ButtonDiv>
-            <HowToText>
+            <CustomText>
                 <p>
                     Users can post how-to articles with images and step by step
                     instructions. Users can search articles by name, author or tags.
@@ -20,27 +23,9 @@ const HowTo = () => {
                     engineer. This app was built using React, Redux, Axios, Material-UI,
                     and Styled Components.
             </p>
-            </HowToText>
+            </CustomText>
         </div>
     )
 }
-
-const ButtonDiv = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 2%;
-@media (max-width: 800px) {
-    margin-top: 4%;
-}
-`
-
-const HowToText = styled.div`
-width: 50%;
-margin: auto;
-@media (max-width: 800px) {
-    width: 90%;
-    margin-top: 5%;
-})`
 
 export default HowTo

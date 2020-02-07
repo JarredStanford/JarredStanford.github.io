@@ -1,14 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Button } from 'antd'
+import designComponents from '../../utils/designComponents'
 
 const BetterReads = () => {
+
+    const { ButtonDiv, CustomText, MarginedButton } = designComponents()
+
     return (
         <div style={{ margin: 'auto' }}>
             <ButtonDiv>
-                <Button href='https://github.com/labs15-allegiance' style={{ width: '150px' }}>GitHub</Button>
+                <MarginedButton href='https://github.com/labs15-allegiance' >GitHub</MarginedButton>
             </ButtonDiv>
-            <BetterText>
+            <CustomText>
                 <p>
                     Users search for books and we return recommendations using machine learning. My main contribution to this project was the back end Node server that connects the Flask API and the front end to provide recommendations. My server was also used for authentication, user profile info and user saved book
         lists.
@@ -21,27 +23,9 @@ const BetterReads = () => {
                     on Heroku.
             </p>
                 <p>Sadly, the data science API is no longer hosted so the main function of the app no longer works.</p>
-            </BetterText>
+            </CustomText>
         </div>
     )
 }
-
-const ButtonDiv = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 2%;
-@media (max-width: 800px) {
-    margin-top: 4%;
-}
-`
-
-const BetterText = styled.div`
-width: 50%;
-margin: auto;
-@media (max-width: 800px) {
-    width: 90%;
-    margin-top: 5%;
-})`
 
 export default BetterReads

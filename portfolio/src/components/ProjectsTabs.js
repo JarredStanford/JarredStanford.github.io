@@ -7,6 +7,8 @@ import Allegiance from './projects/Allegiance'
 import BetterReads from './projects/BetterReads'
 import DNDRNG from './projects/DNDRNG'
 import HowTo from './projects/HowTo'
+import OffsiteSales from './projects/OffsiteSales'
+import Jeopardy from './projects/Jeopardy'
 
 const ProjectsTabs = () => {
 
@@ -14,25 +16,35 @@ const ProjectsTabs = () => {
 
     return (
         <ProjectHolder defaultActiveKey='1' >
-            <TabPane tab="Allegiance" key="1">
+            <TabPane tab='Jeopardy' key='1'>
                 <Project>
-                    <ProjectImage src='https://i.imgur.com/jf92vhY.png' alt='Allegiance' />
+                    <Jeopardy />
+                </Project>
+            </TabPane>
+            <TabPane tab='Offsite Sales' key='2'>
+                <Project>
+                    <OffsiteSales />
+                </Project>
+            </TabPane>
+            <TabPane tab='Allegiance' key='3'>
+                <Project>
+                    <ProjectImage src={'https://i.imgur.com/jf92vhY.png'} alt='Allegiance' />
                     <Allegiance />
                 </Project>
             </TabPane>
-            <TabPane tab="How To" key="2">
+            <TabPane tab='How To' key='4'>
                 <Project>
                     <ProjectImage src={'https://i.imgur.com/XYRHF3K.png'} alt='How To' />
                     <HowTo />
                 </Project>
             </TabPane>
-            <TabPane tab='DND Random Encounter Generator' key="3">
+            <TabPane tab='DND Random Encounter Generator' key='5'>
                 <Project>
                     <ProjectImage src={'https://i.imgur.com/5DLZEXG.png'} alt='DND RNG' />
                     <DNDRNG />
                 </Project>
             </TabPane>
-            <TabPane tab="Better Reads" key="4">
+            <TabPane tab='Better Reads' key='6'>
                 <Project>
                     <BetterReads />
                 </Project>

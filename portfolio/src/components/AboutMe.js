@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Pic from '../assets/pic.jpg'
 
 const AboutMe = () => {
     return (
