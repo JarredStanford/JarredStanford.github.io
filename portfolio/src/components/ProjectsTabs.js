@@ -8,10 +8,6 @@ import BetterReads from './projects/BetterReads'
 import DNDRNG from './projects/DNDRNG'
 import HowTo from './projects/HowTo'
 
-import HowToImage from '../assets/HowToImage.png'
-import DNDRNGImage from '../assets/DNDRNGImage.png'
-import AllegianceImage from '../assets/AllegianceImage.png'
-
 const ProjectsTabs = () => {
 
     const { TabPane } = Tabs;
@@ -20,19 +16,19 @@ const ProjectsTabs = () => {
         <ProjectHolder defaultActiveKey='1' >
             <TabPane tab="Allegiance" key="1">
                 <Project>
-                    <ProjectImage src={AllegianceImage} alt='Allegiance' />
+                    <ProjectImage src='https://i.imgur.com/jf92vhY.png' alt='Allegiance' />
                     <Allegiance />
                 </Project>
             </TabPane>
             <TabPane tab="How To" key="2">
                 <Project>
-                    <ProjectImage src={HowToImage} alt='How To' />
+                    <ProjectImage src={'https://i.imgur.com/XYRHF3K.png'} alt='How To' />
                     <HowTo />
                 </Project>
             </TabPane>
             <TabPane tab='DND Random Encounter Generator' key="3">
                 <Project>
-                    <ProjectImage src={DNDRNGImage} alt='DND RNG' />
+                    <ProjectImage src={'https://i.imgur.com/5DLZEXG.png'} alt='DND RNG' />
                     <DNDRNG />
                 </Project>
             </TabPane>

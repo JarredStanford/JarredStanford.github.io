@@ -5,7 +5,7 @@ import Pic from '../assets/pic.jpg'
 const AboutMe = () => {
     return (
         <AboutDiv >
-            <ProfilePic src={Pic} alt={'Me!'} />
+            <ProfilePic src={'https://i.imgur.com/1YtoOO8.jpg'} alt={'Me!'} />
             <Holder>
                 <p>Hi, I'm Jarred Stanford, a full stack developer specializing in React and Node. I love design and learning how to use new tools & languages. The best code is clean, effective and easy to understand.</p>
 
