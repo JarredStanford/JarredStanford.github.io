@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Button, Input } from 'antd'
+import { Button, Input, message } from 'antd'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com';
 
@@ -18,16 +18,24 @@ const Footer = () => {
         }));
     };
 
+    const success = () => {
+        message.success('Your message has been sent!')
+    }
+
     const sendEmail = e => {
         e.preventDefault()
         console.log('hi')
         emailjs.send('default_service', 'template_rxBLuD03', values, 'user_Wb3obz7zel7zFLGgOSJBi')
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                success()
             }, (err) => {
                 console.log('FAILED...', err);
             });
+        setValues({})
     }
+
+
     return (
         <div style={{ textAlign: 'center' }}>
             <h1>Contact Info</h1>
@@ -36,7 +44,7 @@ const Footer = () => {
             <ContactForm onSubmit={sendEmail}>
                 <Input type='name' onChange={handleChange} placeholder='Name' value={values.name || ""} name={'name'} style={{ margin: '1%' }} />
                 <Input type='email' onChange={handleChange} placeholder='Email' value={values.email || ""} name={'email'} style={{ margin: '1%' }} />
-                <TextArea name='message' onChange={handleChange} value={values.message || ""} placeholder='Enter your message...' autosize={{ minRows: 3, maxRows: 5 }} style={{ margin: '1%' }} />
+                <TextArea name='message' onChange={handleChange} value={values.message || ""} placeholder='Enter your message...' autoSize={{ minRows: 3, maxRows: 5 }} style={{ margin: '1%' }} />
                 <Button htmlType='submit'>Submit</Button>
             </ContactForm>
         </div>
