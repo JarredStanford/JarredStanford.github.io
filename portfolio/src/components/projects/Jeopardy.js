@@ -8,8 +8,7 @@ const Jeopardy = () => {
     return (
         <div style={{ margin: 'auto' }}>
             <ButtonDiv>
-                <MarginedButton>Deployed Site</MarginedButton>
-                <MarginedButton>GitHub</MarginedButton>
+                <MarginedButton href='https://github.com/JarredStanford/jeopardy-frontend'>GitHub</MarginedButton>
             </ButtonDiv>
             <CustomText>
                 <p>Jeopardy aims to present an experience similar to actual Jeopardy by feeding random questions scraped from the j-archive.
